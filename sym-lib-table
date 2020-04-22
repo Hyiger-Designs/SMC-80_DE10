@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name de10-lite-ram-rom-ide-rescue)(type Legacy)(uri ${KIPRJMOD}/de10-lite-ram-rom-ide-rescue.lib)(options "")(descr ""))
+  (lib (name SMC-80)(type Legacy)(uri /Users/rlewis/gitrepo/SMC-80/SMC-80.lib)(options "")(descr ""))
+  (lib (name SMC-80-rescue)(type Legacy)(uri /Users/rlewis/gitrepo/SMC-80/SMC-80-rescue.lib)(options "")(descr ""))
+)

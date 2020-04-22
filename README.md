@@ -1,1 +1,1 @@
-SMC-80_DE10
+A daughter card for the [DE10-Lite Board](http://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=1021) supports: SPI, I2C, Serial, SRAM, and 40-pin IDE. Can be used with Grant Searle's multicomp project.
