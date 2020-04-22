@@ -264,7 +264,7 @@ NoConn ~ 2400 2550
 NoConn ~ 2400 1150
 NoConn ~ 2400 1250
 $Comp
-L de10-lite-ram-rom-ide-rescue:C_Small-Device-sbc_z80-rescue-THS-80-rescue-de10-lite-ram-rom-rescue C?
+L SMC-80_DE10-rescue:C_Small-Device-sbc_z80-rescue-THS-80-rescue-de10-lite-ram-rom-rescue C?
 U 1 1 5D65939B
 P 3300 2050
 AR Path="/5D65A6A0/5D65939B" Ref="C?"  Part="1" 
@@ -283,7 +283,7 @@ F 9 "https://www.mouser.com/ProductDetail/963-JMK107B7474KA-T" H 3392 2196 50  0
 	-1   0    0    -1  
 $EndComp
 $Comp
-L de10-lite-ram-rom-ide-rescue:GND-power-sbc_z80-rescue-THS-80-rescue-de10-lite-ram-rom-rescue #PWR06
+L SMC-80_DE10-rescue:GND-power-sbc_z80-rescue-THS-80-rescue-de10-lite-ram-rom-rescue #PWR06
 U 1 1 5D65A340
 P 3300 2150
 AR Path="/5D65A340" Ref="#PWR06"  Part="1" 
