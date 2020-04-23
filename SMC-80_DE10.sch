@@ -102,7 +102,6 @@ Wire Wire Line
 	1350 2250 750  2250
 Wire Wire Line
 	1350 2350 750  2350
-NoConn ~ 1350 1350
 Wire Wire Line
 	600  1450 1350 1450
 $Comp
@@ -183,9 +182,9 @@ Wire Wire Line
 Text Label 2800 2200 0    50   ~ 0
 A14
 Text Label 750  1650 0    50   ~ 0
-A16
+MA16
 Text Label 750  1850 0    50   ~ 0
-A18
+MA18
 Text Label 2800 2100 0    50   ~ 0
 A12
 Wire Wire Line
@@ -210,8 +209,8 @@ Text Label 4500 2100 2    50   ~ 0
 A13
 Text Label 4500 2200 2    50   ~ 0
 A15
-Text Label 900  1750 2    50   ~ 0
-A17
+Text Label 950  1750 2    50   ~ 0
+MA17
 Text Notes 4000 2600 0    50   ~ 0
 Y6
 Text Notes 4000 2600 0    50   ~ 0
@@ -462,90 +461,91 @@ S 7300 1500 1500 1550
 U 5F2A9FE8
 F0 "Ram Rom and CPU" 50
 F1 "ram_rom_sio_cpu.sch" 50
-F2 "A[0..18]" O R 8800 1650 50 
-F3 "D[0..7]" T R 8800 1750 50 
-F4 "~M1" O R 8800 1950 50 
-F5 "~MREQ" O R 8800 2350 50 
-F6 "~IORQ" O R 8800 2450 50 
-F7 "CLK" I L 7300 1600 50 
-F8 "~RD" O R 8800 2150 50 
-F9 "~WR" O R 8800 2250 50 
-F10 "~WAIT" I L 7300 2550 50 
-F11 "~HALT" O R 8800 2050 50 
-F12 "RAM_~CE~" I L 7300 2150 50 
-F13 "ROM_~CE~" I L 7300 2050 50 
-F14 "SIO_~CE~" I L 7300 2250 50 
-F15 "CLK_U" I L 7300 1700 50 
-F16 "~RESET" I L 7300 1800 50 
+F2 "D[0..7]" T R 8800 1850 50 
+F3 "~M1" O R 8800 2050 50 
+F4 "~MREQ" O R 8800 2450 50 
+F5 "~IORQ" O R 8800 2550 50 
+F6 "CLK" I L 7300 1800 50 
+F7 "~RD" O R 8800 2250 50 
+F8 "~WR" O R 8800 2350 50 
+F9 "~WAIT" I L 7300 2550 50 
+F10 "~HALT" O R 8800 2150 50 
+F11 "RAM_~CE~" I L 7300 2250 50 
+F12 "ROM_~CE~" I L 7300 2150 50 
+F13 "SIO_~CE~" I L 7300 2350 50 
+F14 "CLK_U" I L 7300 1900 50 
+F15 "~RESET" I L 7300 2000 50 
+F16 "A[0..15]" O R 8800 1650 50 
+F17 "MA[14..18]" I L 7300 1650 50 
 $EndSheet
 Wire Wire Line
-	6700 2050 7300 2050
-Text Label 7000 2050 2    50   ~ 0
-ROM_~CE
+	6700 2150 7300 2150
 Text Label 7000 2150 2    50   ~ 0
+ROM_~CE
+Text Label 7000 2250 2    50   ~ 0
 RAM_~CE
 Wire Wire Line
-	6700 2150 7300 2150
-Wire Wire Line
 	6700 2250 7300 2250
-Text Label 9300 1950 2    50   ~ 0
+Wire Wire Line
+	6700 2350 7300 2350
+Text Label 9300 2050 2    50   ~ 0
 ~M1
 Wire Wire Line
-	9400 1950 8800 1950
+	9400 2050 8800 2050
 Wire Bus Line
 	8800 1650 9400 1650
 Text Label 9300 1650 2    50   ~ 0
-A[0..18]
+A[0..15]
 Wire Bus Line
-	8800 1750 9400 1750
-Text Label 9300 1750 2    50   ~ 0
+	8800 1850 9400 1850
+Text Label 9300 1850 2    50   ~ 0
 D[0..7]
 Wire Wire Line
-	9400 2050 8800 2050
-Text Label 9300 2050 2    50   ~ 0
+	9400 2150 8800 2150
+Text Label 9300 2150 2    50   ~ 0
 ~HALT
 Wire Wire Line
 	7300 2550 6700 2550
 Text Label 6900 2550 2    50   ~ 0
 ~WAIT
-Text Label 7000 2250 2    50   ~ 0
+Text Label 7000 2350 2    50   ~ 0
 SIO_~CE
 Wire Wire Line
 	3900 3000 4500 3000
 Text Label 4450 3000 2    50   ~ 0
 SIO_~CE
 Wire Wire Line
-	9400 2250 8800 2250
-Text Label 9300 2250 2    50   ~ 0
+	9400 2350 8800 2350
+Text Label 9300 2350 2    50   ~ 0
 ~WR
-Text Label 9200 2150 0    50   ~ 0
+Text Label 9200 2250 0    50   ~ 0
 ~RD
 Wire Wire Line
-	9400 2150 8800 2150
-Wire Wire Line
-	6700 1600 7300 1600
-Text Label 6700 1600 0    50   ~ 0
-CLK
-Text Label 6950 1800 2    50   ~ 0
-~RESET
+	9400 2250 8800 2250
 Wire Wire Line
 	6700 1800 7300 1800
+Text Label 6700 1800 0    50   ~ 0
+CLK
+Text Label 6950 2000 2    50   ~ 0
+~RESET
+Wire Wire Line
+	6700 2000 7300 2000
 Text Label 3050 3000 2    50   ~ 0
 CLK_U
 Wire Wire Line
 	3900 2900 4500 2900
-Text Label 6950 1700 2    50   ~ 0
+Text Label 6950 1900 2    50   ~ 0
 CLK_U
 Wire Wire Line
-	6700 1700 7300 1700
-Wire Wire Line
-	9400 2350 8800 2350
-Text Label 9300 2350 2    50   ~ 0
-~MREQ
-Text Label 9300 2450 2    50   ~ 0
-~IORQ
+	6700 1900 7300 1900
 Wire Wire Line
 	9400 2450 8800 2450
+Text Label 9300 2450 2    50   ~ 0
+~MREQ
+Text Label 9300 2550 2    50   ~ 0
+~IORQ
+Wire Wire Line
+	9400 2550 8800 2550
 Wire Wire Line
 	5400 1200 5950 1200
 Wire Wire Line
@@ -579,21 +579,21 @@ Wire Wire Line
 Wire Wire Line
 	5400 2700 5950 2700
 Wire Wire Line
-	5400 2900 5950 2900
+	5400 3750 5950 3750
 Wire Wire Line
-	5400 3000 5950 3000
+	5400 3850 5950 3850
 Wire Wire Line
-	5400 3100 5950 3100
+	5400 3950 5950 3950
 Wire Wire Line
-	5400 3200 5950 3200
+	5400 4050 5950 4050
 Wire Wire Line
-	5400 3300 5950 3300
+	5400 4150 5950 4150
 Wire Wire Line
-	5400 3400 5950 3400
+	5400 4250 5950 4250
 Wire Wire Line
-	5400 3500 5950 3500
+	5400 4350 5950 4350
 Wire Wire Line
-	5400 3600 5950 3600
+	5400 4450 5950 4450
 Text Label 5700 1200 2    50   ~ 0
 A0
 Text Label 5700 1300 2    50   ~ 0
@@ -626,21 +626,21 @@ Text Label 5700 2600 2    50   ~ 0
 A14
 Text Label 5700 2700 2    50   ~ 0
 A15
-Text Label 5700 2900 2    50   ~ 0
+Text Label 5700 3750 2    50   ~ 0
 D0
-Text Label 5700 3000 2    50   ~ 0
+Text Label 5700 3850 2    50   ~ 0
 D1
-Text Label 5700 3100 2    50   ~ 0
+Text Label 5700 3950 2    50   ~ 0
 D2
-Text Label 5700 3200 2    50   ~ 0
+Text Label 5700 4050 2    50   ~ 0
 D3
-Text Label 5700 3300 2    50   ~ 0
+Text Label 5700 4150 2    50   ~ 0
 D4
-Text Label 5700 3400 2    50   ~ 0
+Text Label 5700 4250 2    50   ~ 0
 D5
-Text Label 5700 3500 2    50   ~ 0
+Text Label 5700 4350 2    50   ~ 0
 D6
-Text Label 5700 3600 2    50   ~ 0
+Text Label 5700 4450 2    50   ~ 0
 D7
 Entry Wire Line
 	5950 1200 6050 1300
@@ -675,21 +675,21 @@ Entry Wire Line
 Entry Wire Line
 	5950 2700 6050 2800
 Entry Wire Line
-	5950 2900 6050 3000
+	5950 3750 6050 3850
 Entry Wire Line
-	5950 3000 6050 3100
+	5950 3850 6050 3950
 Entry Wire Line
-	5950 3100 6050 3200
+	5950 3950 6050 4050
 Entry Wire Line
-	5950 3200 6050 3300
+	5950 4050 6050 4150
 Entry Wire Line
-	5950 3300 6050 3400
+	5950 4150 6050 4250
 Entry Wire Line
-	5950 3400 6050 3500
+	5950 4250 6050 4350
 Entry Wire Line
-	5950 3500 6050 3600
+	5950 4350 6050 4450
 Entry Wire Line
-	5950 3600 6050 3700
+	5950 4450 6050 4550
 NoConn ~ 4850 5400
 NoConn ~ 1350 1250
 NoConn ~ 1350 1150
@@ -704,7 +704,6 @@ F 3 "~" H 1550 2550 50  0001 C CNN
 	1    1550 2550
 	1    0    0    -1  
 $EndComp
-NoConn ~ 1350 1550
 NoConn ~ 1350 2550
 NoConn ~ 1350 2650
 NoConn ~ 1350 2750
@@ -712,8 +711,52 @@ NoConn ~ 1350 2850
 NoConn ~ 1350 2950
 NoConn ~ 3400 2900
 NoConn ~ 3400 2800
+Text Label 750  1350 0    50   ~ 0
+MA14
+Wire Wire Line
+	750  1350 1350 1350
+Wire Wire Line
+	1350 1550 750  1550
+Text Label 950  1550 2    50   ~ 0
+MA15
 Wire Bus Line
-	6050 2950 6050 3750
+	6700 1650 7300 1650
+Text Label 7200 1650 2    50   ~ 0
+MA[14..18]
+Wire Wire Line
+	5400 3000 5950 3000
+Wire Wire Line
+	5400 3100 5950 3100
+Wire Wire Line
+	5400 3200 5950 3200
+Wire Wire Line
+	5400 3300 5950 3300
+Wire Wire Line
+	5400 3400 5950 3400
+Text Label 5700 3000 2    50   ~ 0
+MA14
+Text Label 5700 3100 2    50   ~ 0
+MA15
+Text Label 5700 3200 2    50   ~ 0
+MA16
+Text Label 5700 3300 2    50   ~ 0
+MA17
+Text Label 5700 3400 2    50   ~ 0
+MA18
+Entry Wire Line
+	5950 3000 6050 3100
+Entry Wire Line
+	5950 3100 6050 3200
+Entry Wire Line
+	5950 3200 6050 3300
+Entry Wire Line
+	5950 3300 6050 3400
+Entry Wire Line
+	5950 3400 6050 3500
+Wire Bus Line
+	6050 3100 6050 3500
+Wire Bus Line
+	6050 3800 6050 4600
 Wire Bus Line
 	6050 1200 6050 2800
 $EndSCHEMATC
