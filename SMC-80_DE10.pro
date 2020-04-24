@@ -1,4 +1,4 @@
-update=Wednesday, September 25, 2019 at 01:58:40 PM
+update=Thursday, April 23, 2020 at 08:23:46 PM
 version=1
 last_client=kicad
 [general]
@@ -50,7 +50,7 @@ ViaDrill3=0.4064
 dPairWidth1=0.2
 dPairGap1=0.25
 dPairViaGap1=0.25
-SilkLineWidth=0.1524
+SilkLineWidth=0.127
 SilkTextSizeV=0.8128
 SilkTextSizeH=0.8128
 SilkTextSizeThickness=0.1524
@@ -63,7 +63,7 @@ CopperTextThickness=0.3048
 CopperTextItalic=0
 CopperTextUpright=1
 EdgeCutLineWidth=0.0508
-CourtyardLineWidth=0.05
+CourtyardLineWidth=0.0508
 OthersLineWidth=0.1524
 OthersTextSizeV=0.8128
 OthersTextSizeH=0.8128
@@ -80,11 +80,11 @@ Type=0
 Enabled=1
 [pcbnew/Layer.In1.Cu]
 Name=In1.Cu
-Type=0
+Type=1
 Enabled=1
 [pcbnew/Layer.In2.Cu]
 Name=In2.Cu
-Type=0
+Type=1
 Enabled=1
 [pcbnew/Layer.In3.Cu]
 Name=In3.Cu
