@@ -347,13 +347,13 @@ $EndComp
 $Comp
 L Device:R_Small R2
 U 1 1 5D959555
-P 10300 2000
-F 0 "R2" H 10359 2046 50  0000 L CNN
-F 1 "10K" H 10359 1955 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 10300 2000 50  0001 C CNN
-F 3 "~" H 10300 2000 50  0001 C CNN
-	1    10300 2000
-	-1   0    0    -1  
+P 7100 3200
+F 0 "R2" H 7159 3246 50  0000 L CNN
+F 1 "10K" H 7159 3155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7100 3200 50  0001 C CNN
+F 3 "~" H 7100 3200 50  0001 C CNN
+	1    7100 3200
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_Small R3
@@ -370,9 +370,9 @@ Text Label 9650 5250 2    50   ~ 0
 RAM_~CE
 Text HLabel 9950 1500 2    50   3State ~ 0
 D[0..7]
-Text Label 9500 2100 0    50   ~ 0
+Text Label 7900 3300 2    50   ~ 0
 ROM_~CE
-Text HLabel 9700 2200 2    50   Input ~ 0
+Text HLabel 7700 3400 0    50   Input ~ 0
 ~RD
 Entry Wire Line
 	7550 2400 7450 2500
@@ -490,23 +490,12 @@ Wire Wire Line
 	9300 1200 9850 1200
 Wire Wire Line
 	9300 1100 9850 1100
-Text HLabel 10400 2100 2    50   Input ~ 0
+Text HLabel 7000 3300 0    50   Input ~ 0
 ROM_~CE~
 Text Notes 8950 900  0    50   ~ 0
 Flash/ROM
-$Comp
-L Memory_Flash:SST39SF040 U1
-U 1 1 5D653323
-P 8700 1950
-F 0 "U1" H 8350 3000 50  0000 C CNN
-F 1 "SST39SF040" H 8750 2000 50  0000 C CNN
-F 2 "Package_LCC:PLCC-32_11.4x14.0mm_P1.27mm-Socket" H 8700 2250 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25022B.pdf" H 8700 2250 50  0001 C CNN
-	1    8700 1950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	9300 2200 9700 2200
+	8100 3400 7700 3400
 Wire Wire Line
 	10200 5250 10300 5250
 $Comp
@@ -618,20 +607,6 @@ F 1 "VCC" H 2917 923 50  0000 C CNN
 F 2 "" H 2900 750 50  0001 C CNN
 F 3 "" H 2900 750 50  0001 C CNN
 	1    2900 750 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR?
-U 1 1 5DCF306D
-P 8700 1000
-AR Path="/5DCF306D" Ref="#PWR?"  Part="1" 
-AR Path="/5D6224DC/5DCF306D" Ref="#PWR?"  Part="1" 
-AR Path="/5F2A9FE8/5DCF306D" Ref="#PWR010"  Part="1" 
-F 0 "#PWR010" H 8700 850 50  0001 C CNN
-F 1 "VCC" H 8717 1173 50  0000 C CNN
-F 2 "" H 8700 1000 50  0001 C CNN
-F 3 "" H 8700 1000 50  0001 C CNN
-	1    8700 1000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1129,10 +1104,10 @@ Text Label 3850 5450 0    50   ~ 0
 ~RTS
 Text Label 3850 5550 0    50   ~ 0
 ~CTS
-Text HLabel 9700 2300 2    50   Input ~ 0
+Text HLabel 7700 3100 0    50   Input ~ 0
 ~WR
 Wire Wire Line
-	9300 2300 9700 2300
+	8100 3100 7700 3100
 $Comp
 L Device:R_Small R?
 U 1 1 5ED4ACDD
@@ -1341,29 +1316,11 @@ Text HLabel 7550 5150 0    50   Output ~ 0
 A[0..15]
 Text HLabel 7550 5950 0    50   Input ~ 0
 MA[14..18]
-$Comp
-L power:GND #PWR?
-U 1 1 5EB5C154
-P 8700 3050
-AR Path="/5EB5C154" Ref="#PWR?"  Part="1" 
-AR Path="/5CB63856/5EB5C154" Ref="#PWR?"  Part="1" 
-AR Path="/5CB5AB00/5CB63856/5EB5C154" Ref="#PWR?"  Part="1" 
-AR Path="/5CFABACD/5EB5C154" Ref="#PWR?"  Part="1" 
-AR Path="/5CF9C1ED/5EB5C154" Ref="#PWR?"  Part="1" 
-AR Path="/5D6224DC/5EB5C154" Ref="#PWR?"  Part="1" 
-AR Path="/5F2A9FE8/5EB5C154" Ref="#PWR0102"  Part="1" 
-F 0 "#PWR0102" H 8700 2800 50  0001 C CNN
-F 1 "GND" H 8705 2877 50  0000 C CNN
-F 2 "" H 8700 3050 50  0001 C CNN
-F 3 "" H 8700 3050 50  0001 C CNN
-	1    8700 3050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	9300 2100 10300 2100
+	8100 3300 7100 3300
 Wire Wire Line
-	10400 2100 10300 2100
-Connection ~ 10300 2100
+	7000 3300 7100 3300
+Connection ~ 7100 3300
 Text HLabel 7450 2800 0    50   Input ~ 0
 MA[14..18]
 Wire Wire Line
@@ -1371,6 +1328,17 @@ Wire Wire Line
 Connection ~ 10200 5250
 Text Notes 9050 3950 0    50   ~ 0
 SRAM 512K
+$Comp
+L Memory_Flash:SST39LF040 U?
+U 1 1 5EA5881D
+P 8700 2300
+F 0 "U?" H 8700 3781 50  0000 C CNN
+F 1 "SST39LF040" H 8700 3690 50  0000 C CNN
+F 2 "Package_LCC:PLCC-32_11.4x14.0mm_P1.27mm-Socket" H 8700 2600 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25022B.pdf" H 8700 2600 50  0001 C CNN
+	1    8700 2300
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
 	1550 5700 1550 5850
 Wire Bus Line
