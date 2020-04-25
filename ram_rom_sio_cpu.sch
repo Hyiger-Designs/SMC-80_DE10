@@ -221,7 +221,7 @@ Wire Wire Line
 	9200 5450 9750 5450
 Wire Wire Line
 	9200 5350 9750 5350
-Text HLabel 10300 5250 2    50   Input ~ 0
+Text HLabel 9750 5250 2    50   Input ~ 0
 RAM_~CE~
 Text HLabel 9750 5350 2    50   Input ~ 0
 ~RD
@@ -344,34 +344,8 @@ F 3 "" H 5850 4000 50  0001 C CNN
 	1    5850 4000
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R_Small R2
-U 1 1 5D959555
-P 7100 3200
-F 0 "R2" H 7159 3246 50  0000 L CNN
-F 1 "10K" H 7159 3155 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7100 3200 50  0001 C CNN
-F 3 "~" H 7100 3200 50  0001 C CNN
-	1    7100 3200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R3
-U 1 1 5D966170
-P 10200 5150
-F 0 "R3" H 10259 5196 50  0000 L CNN
-F 1 "10K" H 10259 5105 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 10200 5150 50  0001 C CNN
-F 3 "~" H 10200 5150 50  0001 C CNN
-	1    10200 5150
-	-1   0    0    -1  
-$EndComp
-Text Label 9650 5250 2    50   ~ 0
-RAM_~CE
 Text HLabel 9950 1500 2    50   3State ~ 0
 D[0..7]
-Text Label 7900 3300 2    50   ~ 0
-ROM_~CE
 Text HLabel 7700 3400 0    50   Input ~ 0
 ~RD
 Entry Wire Line
@@ -490,14 +464,12 @@ Wire Wire Line
 	9300 1200 9850 1200
 Wire Wire Line
 	9300 1100 9850 1100
-Text HLabel 7000 3300 0    50   Input ~ 0
+Text HLabel 7700 3300 0    50   Input ~ 0
 ROM_~CE~
 Text Notes 8950 900  0    50   ~ 0
 Flash/ROM
 Wire Wire Line
 	8100 3400 7700 3400
-Wire Wire Line
-	10200 5250 10300 5250
 $Comp
 L Device:C_Small C2
 U 1 1 5F181CA3
@@ -579,20 +551,6 @@ F 1 "VCC" H 8717 4223 50  0000 C CNN
 F 2 "" H 8700 4050 50  0001 C CNN
 F 3 "" H 8700 4050 50  0001 C CNN
 	1    8700 4050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR?
-U 1 1 5DCDDE0E
-P 10200 5050
-AR Path="/5DCDDE0E" Ref="#PWR?"  Part="1" 
-AR Path="/5D6224DC/5DCDDE0E" Ref="#PWR?"  Part="1" 
-AR Path="/5F2A9FE8/5DCDDE0E" Ref="#PWR019"  Part="1" 
-F 0 "#PWR019" H 10200 4900 50  0001 C CNN
-F 1 "VCC" H 10217 5223 50  0000 C CNN
-F 2 "" H 10200 5050 50  0001 C CNN
-F 3 "" H 10200 5050 50  0001 C CNN
-	1    10200 5050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1316,29 +1274,25 @@ Text HLabel 7550 5150 0    50   Output ~ 0
 A[0..15]
 Text HLabel 7550 5950 0    50   Input ~ 0
 MA[14..18]
-Wire Wire Line
-	8100 3300 7100 3300
-Wire Wire Line
-	7000 3300 7100 3300
-Connection ~ 7100 3300
 Text HLabel 7450 2800 0    50   Input ~ 0
 MA[14..18]
-Wire Wire Line
-	9200 5250 10200 5250
-Connection ~ 10200 5250
 Text Notes 9050 3950 0    50   ~ 0
 SRAM 512K
 $Comp
-L Memory_Flash:SST39LF040 U?
+L Memory_Flash:SST39LF040 U1
 U 1 1 5EA5881D
 P 8700 2300
-F 0 "U?" H 8700 3781 50  0000 C CNN
+F 0 "U1" H 8700 3781 50  0000 C CNN
 F 1 "SST39LF040" H 8700 3690 50  0000 C CNN
 F 2 "Package_LCC:PLCC-32_11.4x14.0mm_P1.27mm-Socket" H 8700 2600 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25022B.pdf" H 8700 2600 50  0001 C CNN
 	1    8700 2300
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	7700 3300 8100 3300
+Wire Wire Line
+	9200 5250 9750 5250
 Wire Bus Line
 	1550 5700 1550 5850
 Wire Bus Line

@@ -117,7 +117,7 @@ F 3 "" H 1100 2450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3300 4000 3900 4000
-Text Label 4800 3900 0    50   ~ 0
+Text Label 4850 3700 0    50   ~ 0
 CLK
 Text Notes 3650 4000 0    50   ~ 0
 AB3
@@ -151,7 +151,7 @@ Text Notes 3650 3300 0    50   ~ 0
 AA9
 Text Notes 3650 3400 0    50   ~ 0
 AA8
-Text Label 5000 3600 2    50   ~ 0
+Text Label 4950 3600 2    50   ~ 0
 D3
 Text Label 5000 3400 2    50   ~ 0
 D1
@@ -159,9 +159,9 @@ Wire Wire Line
 	4400 3600 5000 3600
 Wire Wire Line
 	4400 3400 5000 3400
-Text Label 5000 3800 2    50   ~ 0
+Text Label 4950 3900 2    50   ~ 0
 D7
-Text Label 5000 3700 2    50   ~ 0
+Text Label 4950 3800 2    50   ~ 0
 D5
 Wire Wire Line
 	4400 3800 5000 3800
