@@ -589,6 +589,9 @@ F 0 "U3" H 8350 6250 50  0000 C CNN
 F 1 "AS6C4008A-55ZIN" H 9150 6250 50  0000 C CNN
 F 2 "Package_SO:TSOP-II-32_21.0x10.2mm_P1.27mm" H 8700 5250 50  0001 C CNN
 F 3 "https://www.alliancememory.com/wp-content/uploads/pdf/AS6C4008.pdf" H 8700 5250 50  0001 C CNN
+F 4 "SRAM 4M, 2.7-5.5V, 55ns 512K x 8 Asynch SRAM" H 8700 5150 50  0001 C CNN "Description"
+F 5 "Alliance Memory" H 8700 5150 50  0001 C CNN "Manufacturer_Name"
+F 6 "AS6C4008A-55ZIN" H 8700 5150 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8700 5150
 	1    0    0    -1  
 $EndComp
@@ -1034,7 +1037,10 @@ AR Path="/5F2A9FE8/5EA718DA" Ref="RN2"  Part="1"
 F 0 "RN2" V 4450 6600 50  0000 C CNN
 F 1 "2K2" V 4350 6600 50  0000 C CNN
 F 2 "Resistor_SMD:R_Cat16-4" V 5225 6600 50  0001 C CNN
-F 3 "~" H 4750 6600 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/54/CATCAY-777361.pdf" H 4750 6600 50  0001 C CNN
+F 4 "Resistor Networks & Arrays 2.2K OHMS 5% CONV 4RES Anti-Sulfur" H 4750 6600 50  0001 C CNN "Description"
+F 5 "Bourns" H 4750 6600 50  0001 C CNN "Manufacturer_Name"
+F 6 "CAY16-222J4AS" H 4750 6600 50  0001 C CNN "Manufacturer_Part_Number"
 	1    4750 6600
 	0    1    1    0   
 $EndComp
@@ -1288,6 +1294,9 @@ F 0 "U1" H 8700 3781 50  0000 C CNN
 F 1 "SST39LF040" H 8700 3690 50  0000 C CNN
 F 2 "Package_LCC:PLCC-32_11.4x14.0mm_P1.27mm-Socket" H 8700 2600 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25022B.pdf" H 8700 2600 50  0001 C CNN
+F 4 "NOR Flash 3.0 to 3.6V 4Mbit Multi-Purpose Flash" H 8700 2300 50  0001 C CNN "Description"
+F 5 "Microchip" H 8700 2300 50  0001 C CNN "Manufacturer_Name"
+F 6 "SST39LF040-55-4C-NHE" H 8700 2300 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8700 2300
 	1    0    0    -1  
 $EndComp
