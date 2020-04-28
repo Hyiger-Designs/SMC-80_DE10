@@ -67,19 +67,17 @@ Wire Wire Line
 	3150 5600 3350 5600
 Wire Wire Line
 	3350 5800 3350 5900
-Text Label 1350 3450 2    50   ~ 0
+Text Label 1450 3550 2    50   ~ 0
 ~M1
-Text Label 1450 3250 2    50   ~ 0
+Text Label 1450 3350 2    50   ~ 0
 ~IORQ
-Text Notes 1550 3850 0    50   ~ 0
-AA20
-Text Notes 1550 3450 0    50   ~ 0
-AB21
-Text Notes 1550 3750 0    50   ~ 0
-AA19
-Text Notes 1550 3650 0    50   ~ 0
-Y19
 Text Notes 1550 3550 0    50   ~ 0
+AB9
+Text Notes 1550 2750 0    50   ~ 0
+AA19
+Text Notes 1550 2650 0    50   ~ 0
+Y19
+Text Notes 1550 2550 0    50   ~ 0
 AB20
 $Comp
 L Connector_Generic:Conn_01x10 J1
@@ -93,15 +91,15 @@ F 3 "~" H 2050 2550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1850 2950 1250 2950
-Wire Wire Line
-	1850 3450 1250 3450
-Wire Wire Line
 	1850 3050 1250 3050
+Wire Wire Line
+	1850 3550 1250 3550
 Wire Wire Line
 	1850 3250 1250 3250
 Wire Wire Line
 	1850 3350 1250 3350
+Wire Wire Line
+	1850 3450 1250 3450
 Wire Wire Line
 	1100 2450 1850 2450
 $Comp
@@ -120,7 +118,7 @@ Wire Wire Line
 Text Label 4850 3700 0    50   ~ 0
 CLK
 Text Notes 3650 4000 0    50   ~ 0
-AB3
+AB2
 Wire Wire Line
 	3300 3300 3900 3300
 Wire Wire Line
@@ -181,41 +179,37 @@ Wire Wire Line
 	3900 3200 3300 3200
 Text Label 3300 3200 0    50   ~ 0
 A14
-Text Label 1250 2650 0    50   ~ 0
+Text Label 1250 2750 0    50   ~ 0
 MA16
-Text Label 1250 2850 0    50   ~ 0
+Text Label 1250 2950 0    50   ~ 0
 MA18
 Text Label 3300 3100 0    50   ~ 0
 A12
 Wire Wire Line
-	1850 2850 1250 2850
+	1850 2950 1250 2950
 Wire Wire Line
-	1250 2650 1850 2650
+	1250 2750 1850 2750
 Text Notes 3650 3600 0    50   ~ 0
 AA7
 Text Notes 3650 3700 0    50   ~ 0
 AA6
-Text Notes 3650 3800 0    50   ~ 0
-AA5
-Text Notes 3650 3900 0    50   ~ 0
-AB3
 Wire Wire Line
 	5000 3100 4400 3100
 Wire Wire Line
 	5000 3200 4400 3200
 Wire Wire Line
-	1850 2750 1250 2750
+	1850 2850 1250 2850
 Text Label 5000 3100 2    50   ~ 0
 A13
 Text Label 5000 3200 2    50   ~ 0
 A15
-Text Label 1450 2750 2    50   ~ 0
+Text Label 1450 2850 2    50   ~ 0
 MA17
 Text Notes 4500 3600 0    50   ~ 0
 Y6
-Text Notes 4500 3600 0    50   ~ 0
-Y5
 Text Notes 4500 3700 0    50   ~ 0
+Y5
+Text Notes 4500 3800 0    50   ~ 0
 Y4
 Wire Wire Line
 	3000 4200 3000 4100
@@ -234,9 +228,9 @@ Wire Wire Line
 	3000 3900 3000 3500
 Text Notes 3650 2900 0    50   ~ 0
 W12
-Text Notes 4500 3900 0    50   ~ 0
+Text Notes 4500 4000 0    50   ~ 0
 AA2
-Text Notes 4500 3800 0    50   ~ 0
+Text Notes 4500 3900 0    50   ~ 0
 Y3
 Text Notes 4500 3000 0    50   ~ 0
 Y11
@@ -450,11 +444,11 @@ Wire Wire Line
 	3900 2300 3300 2300
 Wire Wire Line
 	5000 2200 4400 2200
-Text Label 1450 3050 2    50   ~ 0
+Text Label 1450 3250 2    50   ~ 0
 ~MREQ
-Text Label 1450 2950 2    50   ~ 0
+Text Label 1450 3050 2    50   ~ 0
 ~HALT
-Text Label 1450 3350 2    50   ~ 0
+Text Label 1450 3450 2    50   ~ 0
 ~WAIT
 $Sheet
 S 7800 2500 1500 1550
@@ -704,20 +698,19 @@ F 3 "~" H 2050 3550 50  0001 C CNN
 	1    2050 3550
 	1    0    0    -1  
 $EndComp
-NoConn ~ 1850 3550
 NoConn ~ 1850 3650
 NoConn ~ 1850 3750
 NoConn ~ 1850 3850
 NoConn ~ 1850 3950
 NoConn ~ 3900 3900
 NoConn ~ 3900 3800
-Text Label 1250 2350 0    50   ~ 0
+Text Label 1250 2550 0    50   ~ 0
 MA14
 Wire Wire Line
-	1250 2350 1850 2350
+	1250 2550 1850 2550
 Wire Wire Line
-	1850 2550 1250 2550
-Text Label 1450 2550 2    50   ~ 0
+	1850 2650 1250 2650
+Text Label 1450 2650 2    50   ~ 0
 MA15
 Wire Bus Line
 	7200 2650 7800 2650
@@ -753,6 +746,20 @@ Entry Wire Line
 	6450 4300 6550 4400
 Entry Wire Line
 	6450 4400 6550 4500
+Text Notes 1550 3250 0    50   ~ 0
+AA12
+Text Notes 1550 3350 0    50   ~ 0
+AA11
+Text Notes 1550 3450 0    50   ~ 0
+Y10
+NoConn ~ 1850 2350
+NoConn ~ -2850 -1550
+Text Notes 1550 2850 0    50   ~ 0
+AB19
+Text Notes 1550 2950 0    50   ~ 0
+AA17
+Text Notes 1550 3050 0    50   ~ 0
+AB17
 Wire Bus Line
 	6550 4100 6550 4500
 Wire Bus Line
