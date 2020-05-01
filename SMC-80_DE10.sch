@@ -122,22 +122,22 @@ AB2
 Wire Wire Line
 	3300 3300 3900 3300
 Wire Wire Line
-	3300 3400 3900 3400
+	5000 3400 4400 3400
 Wire Wire Line
-	3300 3600 3900 3600
+	5000 3600 4400 3600
 Wire Wire Line
-	3300 3700 3900 3700
-Text Label 3300 3400 0    50   ~ 0
+	5000 3800 4400 3800
+Text Label 5000 3400 2    50   ~ 0
 D2
-Text Label 3300 3600 0    50   ~ 0
+Text Label 5000 3600 2    50   ~ 0
 D4
-Text Label 3300 3700 0    50   ~ 0
+Text Label 5000 3800 2    50   ~ 0
 D6
 Text Label 3300 3000 0    50   ~ 0
 ~RD
 Wire Wire Line
 	3900 3000 3300 3000
-Text Label 3300 3300 0    50   ~ 0
+Text Label 4900 3300 0    50   ~ 0
 D0
 Text Notes 3650 3000 0    50   ~ 0
 AB12
@@ -149,20 +149,20 @@ Text Notes 3650 3300 0    50   ~ 0
 AA9
 Text Notes 3650 3400 0    50   ~ 0
 AA8
-Text Label 4950 3600 2    50   ~ 0
+Text Label 3300 3600 0    50   ~ 0
 D3
-Text Label 5000 3400 2    50   ~ 0
+Text Label 3300 3400 0    50   ~ 0
 D1
 Wire Wire Line
-	4400 3600 5000 3600
+	3900 3600 3300 3600
 Wire Wire Line
-	4400 3400 5000 3400
-Text Label 4950 3900 2    50   ~ 0
+	3900 3400 3300 3400
+Text Label 3300 3800 0    50   ~ 0
 D7
-Text Label 4950 3800 2    50   ~ 0
+Text Label 3300 3700 0    50   ~ 0
 D5
 Wire Wire Line
-	4400 3800 5000 3800
+	3900 3700 3300 3700
 Wire Wire Line
 	4400 3700 5000 3700
 Text Notes 4500 3100 0    50   ~ 0
@@ -171,19 +171,19 @@ Text Notes 4500 3200 0    50   ~ 0
 AA10
 Text Notes 4500 3300 0    50   ~ 0
 Y8
-Text Notes 4500 3400 0    50   ~ 0
+Text Notes 4600 3400 2    50   ~ 0
 Y7
 Wire Wire Line
-	3900 3100 3300 3100
+	4400 3100 5000 3100
 Wire Wire Line
-	3900 3200 3300 3200
-Text Label 3300 3200 0    50   ~ 0
+	4400 3200 5000 3200
+Text Label 5000 3200 2    50   ~ 0
 A14
 Text Label 1250 2750 0    50   ~ 0
 MA16
 Text Label 1250 2950 0    50   ~ 0
 MA18
-Text Label 3300 3100 0    50   ~ 0
+Text Label 5000 3100 2    50   ~ 0
 A12
 Wire Wire Line
 	1850 2950 1250 2950
@@ -194,14 +194,14 @@ AA7
 Text Notes 3650 3700 0    50   ~ 0
 AA6
 Wire Wire Line
-	5000 3100 4400 3100
+	3300 3100 3900 3100
 Wire Wire Line
-	5000 3200 4400 3200
+	3300 3200 3900 3200
 Wire Wire Line
 	1850 2850 1250 2850
-Text Label 5000 3100 2    50   ~ 0
+Text Label 3300 3100 0    50   ~ 0
 A13
-Text Label 5000 3200 2    50   ~ 0
+Text Label 3300 3200 0    50   ~ 0
 A15
 Text Label 1450 2850 2    50   ~ 0
 MA17
@@ -230,8 +230,6 @@ Text Notes 3650 2900 0    50   ~ 0
 W12
 Text Notes 4500 4000 0    50   ~ 0
 AA2
-Text Notes 4500 3900 0    50   ~ 0
-Y3
 Text Notes 4500 3000 0    50   ~ 0
 Y11
 Text Notes 4500 2900 0    50   ~ 0
@@ -274,7 +272,7 @@ F 3 "" H 2950 2600 50  0001 C CNN
 $EndComp
 Connection ~ 3000 3500
 Wire Wire Line
-	5000 2700 4400 2700
+	3300 2700 3900 2700
 $Comp
 L Device:C_Small C1
 U 1 1 5DC1E4EE
@@ -289,32 +287,32 @@ $EndComp
 Wire Wire Line
 	5250 3500 4400 3500
 Wire Wire Line
-	4400 2400 5000 2400
+	3900 2400 3300 2400
 Wire Wire Line
 	5000 3000 4400 3000
 Connection ~ 5250 3500
 Wire Wire Line
-	5000 2900 4400 2900
-Text Label 5000 2800 2    50   ~ 0
+	3300 2900 3900 2900
+Text Label 3300 2800 0    50   ~ 0
 A9
-Text Label 5000 2900 2    50   ~ 0
+Text Label 3300 2900 0    50   ~ 0
 A11
 Wire Wire Line
-	5000 2800 4400 2800
+	3300 2800 3900 2800
 Text Label 5000 3000 2    50   ~ 0
 ~WR
 Wire Wire Line
-	3900 2700 3300 2700
-Text Label 3300 2800 0    50   ~ 0
+	4400 2700 5000 2700
+Text Label 5000 2800 2    50   ~ 0
 A8
-Text Label 3300 2900 0    50   ~ 0
+Text Label 5000 2900 2    50   ~ 0
 A10
 Wire Wire Line
-	3900 2800 3300 2800
-Text Label 5000 3300 2    50   ~ 0
+	4400 2800 5000 2800
+Text Label 3550 3300 2    50   ~ 0
 ~RESET
 Wire Wire Line
-	3900 2900 3300 2900
+	4400 2900 5000 2900
 Text Label 5000 2200 2    50   ~ 0
 RAM_~CE
 Wire Wire Line
@@ -388,21 +386,21 @@ F 3 "~" H 5250 3500 50  0001 C CNN
 	1    5250 3500
 	1    0    0    -1  
 $EndComp
-Text Label 5000 2700 2    50   ~ 0
-A7
 Text Label 3300 2700 0    50   ~ 0
+A7
+Text Label 5000 2700 2    50   ~ 0
 A6
-Text Label 5000 2500 2    50   ~ 0
-A5
 Text Label 3300 2500 0    50   ~ 0
+A5
+Text Label 5000 2500 2    50   ~ 0
 A4
-Text Label 5000 2400 2    50   ~ 0
-A3
 Text Label 3300 2400 0    50   ~ 0
+A3
+Text Label 5000 2400 2    50   ~ 0
 A2
-Text Label 5000 2300 2    50   ~ 0
-A1
 Text Label 3300 2300 0    50   ~ 0
+A1
+Text Label 5000 2300 2    50   ~ 0
 A0
 $Comp
 L power:GND #PWR05
@@ -433,15 +431,15 @@ Wire Wire Line
 Wire Wire Line
 	5400 2600 4400 2600
 Wire Wire Line
-	5000 2500 4400 2500
+	3300 2500 3900 2500
 Wire Wire Line
-	5000 2300 4400 2300
+	3300 2300 3900 2300
 Wire Wire Line
-	3900 2500 3300 2500
+	4400 2500 5000 2500
 Wire Wire Line
-	3900 2400 3300 2400
+	4400 2400 5000 2400
 Wire Wire Line
-	3900 2300 3300 2300
+	4400 2300 5000 2300
 Wire Wire Line
 	5000 2200 4400 2200
 Text Label 1450 3250 2    50   ~ 0
@@ -527,7 +525,7 @@ Wire Wire Line
 Text Label 3550 4000 2    50   ~ 0
 CLK_U
 Wire Wire Line
-	4400 3900 5000 3900
+	3900 3800 3300 3800
 Text Label 7450 2900 2    50   ~ 0
 CLK_U
 Wire Wire Line
@@ -703,7 +701,6 @@ NoConn ~ 1850 3750
 NoConn ~ 1850 3850
 NoConn ~ 1850 3950
 NoConn ~ 3900 3900
-NoConn ~ 3900 3800
 Text Label 1250 2550 0    50   ~ 0
 MA14
 Wire Wire Line
@@ -760,6 +757,7 @@ Text Notes 1550 2950 0    50   ~ 0
 AA17
 Text Notes 1550 3050 0    50   ~ 0
 AB17
+NoConn ~ 4400 3900
 Wire Bus Line
 	6550 4100 6550 4500
 Wire Bus Line
