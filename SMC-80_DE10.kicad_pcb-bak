@@ -3741,7 +3741,7 @@
     )
   )
 
-  (gr_text "Port A" (at 120.142 73.66) (layer F.SilkS) (tstamp 5EAC1190)
+  (gr_text "Port A" (at 120.396 73.66) (layer F.SilkS) (tstamp 5EAC1190)
     (effects (font (size 0.8128 0.8128) (thickness 0.1524)))
   )
   (gr_text ø (at 153.986895 122.682) (layer F.SilkS) (tstamp 5EAC05D7)
