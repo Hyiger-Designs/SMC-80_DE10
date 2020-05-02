@@ -29,3 +29,5 @@ gerbers/*
 *.zip
 
 .DS_Store
+
+bom/
