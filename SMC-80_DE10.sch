@@ -4,8 +4,8 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
-Title "DE10-Lite RAM/ROM/IDE Board"
-Date "2019-10-18"
+Title "SMC-80 Lite - Terasic DE10 Z80 Adapter Board"
+Date "2020-05-02"
 Rev "1.0"
 Comp "Hyiger Designs"
 Comment1 ""
@@ -758,6 +758,8 @@ AA17
 Text Notes 1550 3050 0    50   ~ 0
 AB17
 NoConn ~ 4400 3900
+Text Notes 3650 3800 0    50   ~ 0
+AA5
 Wire Bus Line
 	6550 4100 6550 4500
 Wire Bus Line

@@ -31,3 +31,5 @@ gerbers/*
 .DS_Store
 
 bom/
+
+*.pdf
