@@ -870,9 +870,7 @@ Wire Wire Line
 	1200 6850 1200 6750
 NoConn ~ 3600 6750
 NoConn ~ 3600 6650
-NoConn ~ 3600 6300
 NoConn ~ 3600 6200
-NoConn ~ 3600 6100
 NoConn ~ 3600 6000
 Wire Wire Line
 	4450 4900 4450 5100
@@ -1347,6 +1345,14 @@ Wire Wire Line
 	5550 5200 6100 5200
 Wire Wire Line
 	5550 5100 6100 5100
+Wire Wire Line
+	4450 6100 4450 6300
+Wire Wire Line
+	3600 6100 4450 6100
+Wire Wire Line
+	3600 6300 4450 6300
+Text HLabel 4450 6200 2    50   Input ~ 0
+CLK_U
 Wire Bus Line
 	1550 5700 1550 5850
 Wire Bus Line
