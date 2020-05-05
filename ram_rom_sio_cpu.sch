@@ -667,14 +667,6 @@ Wire Wire Line
 	2200 5650 1650 5650
 Wire Wire Line
 	2200 5750 1650 5750
-Text Label 1900 5750 0    50   ~ 0
-A0
-Text Label 1900 5650 0    50   ~ 0
-A1
-Entry Wire Line
-	1650 5650 1550 5750
-Entry Wire Line
-	1650 5750 1550 5850
 Wire Wire Line
 	2200 5950 1650 5950
 Wire Wire Line
@@ -882,8 +874,6 @@ Text HLabel 4450 5000 2    50   Input ~ 0
 CLK_U
 Text Label 2000 6750 2    50   ~ 0
 ~INT
-Text HLabel 1550 5800 0    50   Output ~ 0
-A[0..15]
 Text HLabel 1650 6050 0    50   Input ~ 0
 ~RESET
 $Comp
@@ -1353,14 +1343,18 @@ Wire Wire Line
 	3600 6300 4450 6300
 Text HLabel 4450 6200 2    50   Input ~ 0
 CLK_U
-Wire Bus Line
-	1550 5700 1550 5850
+Text HLabel 1650 5750 0    50   Input ~ 0
+B~A
 Wire Bus Line
 	7550 5600 7550 6000
 Wire Bus Line
-	7450 2600 7450 3000
+	7550 4100 7550 5500
 Wire Bus Line
 	1550 4800 1550 5600
+Wire Bus Line
+	7450 2600 7450 3000
+Wire Bus Line
+	7450 1100 7450 2500
 Wire Bus Line
 	9850 4100 9850 4950
 Wire Bus Line
@@ -1368,9 +1362,7 @@ Wire Bus Line
 Wire Bus Line
 	4350 2800 4350 3650
 Wire Bus Line
-	7450 1100 7450 2500
-Wire Bus Line
-	7550 4100 7550 5500
-Wire Bus Line
 	4350 1100 4350 2700
+Text HLabel 1650 5650 0    50   Input ~ 0
+C~D
 $EndSCHEMATC
