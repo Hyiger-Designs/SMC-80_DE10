@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "SMC-80 DE10 Lite Edition"
+Date "2020-05-06"
+Rev "1.0"
+Comp "Hyiger Designs"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -1345,16 +1345,14 @@ Text HLabel 4450 6200 2    50   Input ~ 0
 CLK_U
 Text HLabel 1650 5750 0    50   Input ~ 0
 B~A
+Text HLabel 1650 5650 0    50   Input ~ 0
+C~D
 Wire Bus Line
 	7550 5600 7550 6000
 Wire Bus Line
-	7550 4100 7550 5500
-Wire Bus Line
-	1550 4800 1550 5600
-Wire Bus Line
 	7450 2600 7450 3000
 Wire Bus Line
-	7450 1100 7450 2500
+	1550 4800 1550 5600
 Wire Bus Line
 	9850 4100 9850 4950
 Wire Bus Line
@@ -1362,7 +1360,9 @@ Wire Bus Line
 Wire Bus Line
 	4350 2800 4350 3650
 Wire Bus Line
+	7450 1100 7450 2500
+Wire Bus Line
+	7550 4100 7550 5500
+Wire Bus Line
 	4350 1100 4350 2700
-Text HLabel 1650 5650 0    50   Input ~ 0
-C~D
 $EndSCHEMATC

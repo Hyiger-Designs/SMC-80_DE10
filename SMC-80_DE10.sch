@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
 Title "SMC-80 Lite - Terasic DE10 Z80 Adapter Board"
-Date "2020-05-02"
+Date "2020-05-06"
 Rev "1.0"
 Comp "Hyiger Designs"
 Comment1 ""
