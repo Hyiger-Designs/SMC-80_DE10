@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-use work.user_types.all;
+use work.utilities.all;
 
 entity SMC_80_DE10 is
 	generic(
@@ -16,7 +16,6 @@ entity SMC_80_DE10 is
 		A        : in  std_logic_vector(15 downto 0);
 		D        : in  std_logic_vector(7 downto 0);
 		nM1      : in  std_logic;
-		nHalt    : in  std_logic;
 		nRD      : in  std_logic;
 		nWR      : in  std_logic;
 		nMREQ    : in  std_logic;
@@ -31,6 +30,7 @@ entity SMC_80_DE10 is
 		nWAIT    : out std_logic;
 		CnD      : out std_logic;
 		BnA      : out std_logic;
+		
 		-- DE10-Lite Board
 		reset_pb : in  std_logic;
 		step_pb  : in  std_logic;
@@ -50,29 +50,58 @@ architecture struct of SMC_80_DE10 is
 	signal RAM_CS       : std_logic;
 	signal Q            : std_logic_vector(7 downto 0);
 	signal display_data : std_logic_vector(23 downto 0);
+	signal SSEG_nENA : std_logic;
+	
+	    -- system reset signals
+    signal power_on_reset       : std_logic_vector(1 downto 0) := (others => '1');
+    signal system_reset         : std_logic;
+	 signal reset_pb_clk1    : std_logic;
+    signal reset_pb_sync    : std_logic;
 begin
 
+	process(CLK_OUT)
+	begin
+		if rising_edge(CLK_OUT) then
+            reset_pb_clk1 <= not reset_pb;
+            reset_pb_sync <= reset_pb_clk1;
+			-- reset the system when requested
+			if (power_on_reset(0) = '1' or reset_pb_sync = '1') then
+				system_reset <= '0';
+			else
+				system_reset <= '1';
+			end if;
+
+			-- shift 0s into the power_on_reset shift register from the MSB
+			power_on_reset <= '0' & power_on_reset(power_on_reset'length - 1 downto 1);
+
+		end if;
+	end process;
+
+	 
 	stepper : ENTITY work.single_step
 		PORT MAP(
-			clk     => clk,
-			reset   => not reset_pb,
+			clk     => CLK_OUT,
+			reset   => not system_reset,
 			step_pb => step_pb,
 			nM1     => nM1,
 			mode_sw => mode_sw,
 			nWait   => nWAIT
 		);
 
-	-- Display address and data lines on seven seg display
+	
 	display_data <= A & D;
 
-	-- Use 6 sseg displays with the decimal point on the 3rd display 
+	SSEG_nENA <= nIORQ or nWR or not nMREQ;
+	
+	-- Use 6 sseg displays with the decimal point on display 2 (3rd from right)
 	display_0 : entity work.display_bytes
-		generic map(DP_POS => 3)
+		generic map(DP_LOC => (0 => 2))
 		port map(
-			clk    => clk,
-			nReset => reset_pb,
+			clk    => CLK_OUT,
+			nEna	 => SSEG_nEna,
+			nReset => system_reset,
 			data   => display_data,
-			DISP   => DISP
+			disp   => DISP
 		);
 
 	slow_clk : if (DEBUG) generate
@@ -97,7 +126,8 @@ begin
 	-- Implement 16K page memory model
 	mmu : entity work.Z80_MMU
 		port map(
-			nRST     => reset_pb,
+			clk	=> CLK_OUT,
+			nRST     => system_reset,
 			A        => A(7 downto 0),
 			Ah       => A(15 downto 14),
 			D        => D,
@@ -105,8 +135,8 @@ begin
 			nM1      => nM1,
 			nMREQ    => nMREQ,
 			nWR      => nWR,
-			nROM_CE  => ROM_nCE,
-			nRAM_CE  => RAM_nCE,
+			ROM_nCE  => ROM_nCE,
+			RAM_nCE  => RAM_nCE,
 			MA       => MA,
 			page_led => page_led
 		);
@@ -126,13 +156,13 @@ begin
 
 	leds : entity work.gen_register
 		port map(
-			clk    => clk,
-			nRESET => reset_pb,
+			clk    => CLK_OUT,
+			nRESET => system_reset,
 			nENA   => LED_nCS,
 			D      => D,
 			Q      => LED
 		);
 
-	nRESET <= reset_pb;
+	nRESET <= system_reset;
 
 end;

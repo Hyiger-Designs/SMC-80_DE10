@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484) Path("C:/Users/richa/gitrepo/SMC-80_DE10/src/output_files/") File("SMC_80_DE10.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484) Path("C:/Users/richa/gitrepo/SMC-80_DE10/z80mmu/output_files/") File("SMC_80_DE10.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

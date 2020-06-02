@@ -1,5 +1,5 @@
 -- Simulate async memory that can be initialized from a binary file
--- defaults to 512K x 8 SRAM with separate enable signals
+-- defaults to 512K x 8 SRAM with separate enable signals for read/write
 
 library IEEE;
 use IEEE.std_logic_1164.all;
@@ -12,9 +12,10 @@ entity SRAM is
 		FILE_NAME  : string  := ""
 	);
 	port(
-		CE_n : in    std_logic;
-		OE_n : in    std_logic;
-		WE_n : in    std_logic;
+		clk  : in    std_logic;
+		CE_n : in    std_logic := '1';
+		OE_n : in    std_logic := '1';
+		WE_n : in    std_logic := '1';
 		A    : in    std_logic_vector(ADDR_WIDTH - 1 downto 0);
 		D    : inout std_logic_vector(DATA_WIDTH - 1 downto 0)
 	);
@@ -26,7 +27,7 @@ architecture behaviour of SRAM is
 	subtype word_t is std_logic_vector((DATA_WIDTH - 1) downto 0);
 	type memory_t is array (2**ADDR_WIDTH - 1 downto 0) of word_t;
 
-	-- Initialize RAM with a binary file
+	-- Initialize RAM with a binary file, default fills RAM with 0x00
 	impure function init_ram(fileName : in String := "") return memory_t is
 		use std.textio.all;
 		type bin_file is file of character;
@@ -49,22 +50,20 @@ architecture behaviour of SRAM is
 	end function;
 
 	signal RAM : memory_t := init_ram(FILE_NAME);
-
-	signal WR    : std_logic;
-	signal D_del : std_logic_vector(7 downto 0);
+	signal A_r		: std_logic_vector(A'range);
 
 begin
 
-	WR    <= '1' when CE_n = '0' and WE_n = '0' else '0';
-	D_del <= D after 1 ns;
-
-	process(WR)
+	process(clk)
 	begin
-		if WR'event and WR = '0' then
-			RAM(to_integer(unsigned(A))) <= D_del;
+	   if rising_edge(clk) then
+			if (CE_n = '0' and WE_n = '0') then
+				RAM(to_integer(unsigned(A))) <= D;
+			end if;
+			A_r <= A;
 		end if;
 	end process;
 
-	D <= RAM(to_integer(unsigned(A))) when OE_n = '0' and CE_n = '0' and WE_n = '1' and not is_x(A) else (others => 'Z');
+	D <= RAM(to_integer(unsigned(A_r))) when OE_n = '0' and CE_n = '0' and WE_n = '1' and not is_x(A) else (others => 'Z');
 
 end;

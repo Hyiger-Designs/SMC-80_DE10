@@ -4,6 +4,7 @@ use ieee.numeric_std.all;
 
 entity Z80_MMU is
 	port(
+		clk      : in  std_logic;
 		nRST     : in  std_logic;
 		A        : in  std_logic_vector(7 downto 0);
 		Ah       : in  std_logic_vector(15 downto 14);
@@ -12,8 +13,8 @@ entity Z80_MMU is
 		nM1      : in  std_logic;
 		nMREQ    : in  std_logic;
 		nWR      : in  std_logic;
-		nROM_CE  : out std_logic;
-		nRAM_CE  : out std_logic;
+		ROM_nCE  : out std_logic;
+		RAM_nCE  : out std_logic;
 		MA       : out std_logic_vector(18 downto 14);
 		page_led : out std_logic
 	);
@@ -64,8 +65,10 @@ begin
 	-- Bank 2 : Page 62,0x3E, RAM 0x78000 - 0x7BFFF
 	-- Bank 3 : Page 63,0x3F, RAM 0x7C000 - 0x7FFFF
 
-	page_registers : ENTITY work.DPRAM
+	page_registers : ENTITY work.reg_file
 		PORT MAP(
+			clk     => clk,
+			nRST    => nRST,
 			nWR_Ena => nPageRegWR,
 			RA      => Ah(15 downto 14), -- selects register to read
 			WA      => A(1 downto 0),   -- selects register to write
@@ -74,12 +77,10 @@ begin
 		);
 
 	-- If bit 6 is set then select ram otherwise select ROM
-	--nRAM_CE <= not page(5) or nMREQ;
-	--nROM_CE <= page(5) or nMREQ;
-	nROM_CE <= '0' when page(5) = '0' and nMREQ = '0' else '1';
-	nRAM_CE <= '0' when page(5) = '1' and nMREQ = '0' else '1';
+	ROM_nCE <= '0' when page(5) = '0' and nMREQ = '0' else '1';
+	RAM_nCE <= '0' when page(5) = '1' and nMREQ = '0' else '1';
 
-	MA <= page(4 downto 0) when nPageEna = '0' else (others => '0');
+	MA <= page(4 downto 0) when nPageEna = '0' else "000" & Ah;
 
 	page_led <= nPageEna;
 end;

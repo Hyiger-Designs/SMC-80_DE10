@@ -33,3 +33,7 @@ gerbers/*
 bom/
 
 *.pdf
+
+z80mmu/.project
+
+z80mmu/.settings/
